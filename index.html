@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html amp>
     <head>
-        <!-- Site made with Mobirise Website Builder v5.1.4, https://mobirise.com -->
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="generator" content="Mobirise v5.1.4, mobirise.com" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image:src" content="assets/images/index-meta.jpg" />
         <meta property="og:image" content="assets/images/index-meta.jpg" />
@@ -566,7 +564,7 @@
                 -webkit-box-pack: justify;
                 -ms-flex-pack: justify;
                 justify-content: space-between;
-                align-items: center;
+                align-items: top;
                 min-height: 70px;
             }
             @media (max-width: 991px) {
@@ -591,7 +589,7 @@
             }
             .navbar-brand {
                 display: flex;
-                align-items: center;
+                align-items: top;
                 word-break: break-word;
                 z-index: 1;
             }
@@ -3004,12 +3002,44 @@
             [class*="-iconfont"] {
                 display: inline-flex;
             }
+.hideme
+{
+    opacity:0;
+}
         </style>
 
         <script async src="https://cdn.ampproject.org/v0.js"></script>
         <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
         <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
         <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+
+  /* Every time the window is scrolled ... */
+  $(window).scroll(function() {
+
+    /* Check the location of each desired element */
+    $('.hideme').each(function(i) {
+
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+      /* If the object is completely visible in the window, fade it it */
+      if (bottom_of_window > bottom_of_object) {
+
+        $(this).animate({
+          'opacity': '1'
+        }, 500);
+
+      }
+
+    });
+
+  });
+
+});
+</script>
     </head>
     <body>
         <amp-sidebar id="sidebar" class="cid-saqiISRwDK" layout="nodisplay" side="right">
@@ -3037,6 +3067,9 @@
                     <div class="navbar-brand">
                         <p class="brand-name mbr-fonts-style display-2">M MOSST / PROJECTS<br /></p>
                     </div>
+<!--<input id="toggle" type="checkbox" style="visibility:hidden">
+<label for="toggle" class="navbar-brand brand-name mbr-fonts-style display-2";>ABOUT</label>
+<div class="box"> </div>-->
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- NAVBAR ITEMS -->
                         <ul class="navbar-nav nav-dropdown mbr-column nav-right" data-app-modern-menu="true">
@@ -3071,14 +3104,14 @@
 
         <section class="content4 mbr-section article cid-sayiFl2vzT" id="content4-17">
             <div class="container">
-                <div class="mbr-text align-center mbr-fonts-style mbr-light mbr-py-4 display-5"><strong>AUDIO R&amp;D • </strong>SPEAKERS, ALGORITHMS</div>
+                <div class="mbr-text align-center mbr-fonts-style mbr-light mbr-py-4 display-5 hideme"><strong>AUDIO R&amp;D • </strong>SPEAKERS, ALGORITHMS</div>
             </div>
         </section>
 
         <section class="amp-lightbox-gallery cid-saqm1jHGFZ" id="gallery2-o">
             <div class="container-fluid">
                 <div class="mbr-row">
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
                         <div class="row">
     						<div class="item-wrapper">
                                 <amp-img src="assets/images/audyssey-soma.jpg" layout="responsive" width="351.423487544484" height="197.5" alt="image" class="placeholder-loader lb-image">
@@ -3105,7 +3138,7 @@
     						 <strong>Audyssey SoMa Audio Dock</strong><br>Transducers, Enclosures, Select Algorithms
     					</div> 
                     </div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/audyssey-bluetooth.jpg" layout="responsive" width="351.05625000000003" height="197.5" alt="image" class="placeholder-loader lb-image">
@@ -3132,7 +3165,7 @@
     						 <strong>Audyssey Wireless Speakers</strong><br>Prototype Design &amp; Development 
     					</div> 
 					</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/audyssey-les-16x9.jpg" layout="responsive" width="351.1111111111111" height="197.5" alt="image" class="placeholder-loader lb-image">
@@ -3159,7 +3192,7 @@
     						 <strong>Audyssey Media Speakers</strong><br>Prototype Design &amp; Development 
     					</div> 
 					</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/audyssey-bassxt-16x9.png" layout="responsive" width="350.7897489539749" height="197.5" alt="image" class="placeholder-loader lb-image">
@@ -3193,7 +3226,7 @@
         <section class="amp-lightbox-gallery cid-sarfLyZPIM" id="gallery2-u">
             <div class="container-fluid">
                 <div class="mbr-row">
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 						<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/sony-dock-16x9.jpg" layout="responsive" width="351.04355555555554" height="197.462" alt="image" class="placeholder-loader lb-image">
@@ -3220,7 +3253,7 @@
     						 <strong>Sony RDP-X50iP iPhone Dock</strong><br>Bass Optimization 
     					</div> 
 					</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/insignia-16x9.png" layout="responsive" width="351.56439169139463" height="197.462" alt="image" class="placeholder-loader lb-image">
@@ -3247,7 +3280,7 @@
     						 <strong>Insignia NS-SBAR Soundbar</strong><br>Transducers, Enclosures, Signal Flow
     					</div> 
 											</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/denon-s-52-16x9.png" layout="responsive" width="350.77985096153844" height="197.462" alt="image" class="placeholder-loader lb-image">
@@ -3274,7 +3307,7 @@
     						 <strong>Denon S-32 &amp; S-52</strong><br>Bass Optimization 
     					</div> 
 											</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/denon-s302-sub-16x9.png" layout="responsive" width="351.5103687943262" height="197.462" alt="image" class="placeholder-loader lb-image">
@@ -3308,7 +3341,7 @@
         <section class="amp-lightbox-gallery cid-saw8M5hWah" id="gallery2-11">
             <div class="container-fluid">
                 <div class="mbr-row">
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/toshiba-tv-1-16x9.png" layout="responsive" width="350.7923076923077" height="197.613" alt="image" class="placeholder-loader lb-image">
@@ -3335,7 +3368,7 @@
     						 <strong>Toshiba TV (Various Models)</strong><br>Sound Tuning &amp; Enhancement 
     					</div> 
 											</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/toshiba-laptop-16x9.jpg" layout="responsive" width="351.5351969504447" height="197.613" alt="image" class="placeholder-loader lb-image">
@@ -3368,14 +3401,14 @@
 
         <section class="content4 mbr-section article cid-saylfSqZEi" id="content4-19">
             <div class="container">
-                <div class="mbr-text align-center mbr-fonts-style mbr-light mbr-py-4 display-5"><strong>AUDIO TESTING • </strong>STEREO TESTS, GUIDES</div>
+                <div class="mbr-text align-center mbr-fonts-style mbr-light mbr-py-4 display-5 hideme"><strong>AUDIO TESTING • </strong>STEREO TESTS, GUIDES</div>
             </div>
         </section>
 
         <section class="amp-lightbox-gallery cid-sasaIOw7Uo" id="gallery2-y">
             <div class="container-fluid">
                 <div class="mbr-row">
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 						<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/fast-audio-test-16x9.jpg" layout="responsive" width="350.79999999999995" height="197.325" alt="image" class="placeholder-loader lb-image">
@@ -3404,7 +3437,7 @@
     						 <strong>Fast Audio Test</strong><br>Creator 
     					</div> 
 											</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/extended-audio-test-16x9.jpg" layout="responsive" width="350.79999999999995" height="197.325" alt="image" class="placeholder-loader lb-image">
@@ -3433,7 +3466,7 @@
     						 <strong>Extended Audio Test</strong><br>Creator 
     					</div> 
 											</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/stepped-sine-sweep-16x9.jpg" layout="responsive" width="350.79999999999995" height="197.325" alt="image" class="placeholder-loader lb-image">
@@ -3462,7 +3495,7 @@
     						 <strong>Stepped Sine Sweep</strong><br>Creator 
     					</div> 
 											</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/audio-problems-16x9.jpg" layout="responsive" width="350.79999999999995" height="197.325" alt="image" class="placeholder-loader lb-image">
@@ -3497,14 +3530,14 @@
 
         <section class="content4 mbr-section article cid-saylHB4Ge3" id="content4-1a">
             <div class="container">
-                <div class="mbr-text align-center mbr-fonts-style mbr-light mbr-py-4 display-5"><strong>MUSIC • </strong>DJ, MIXING, PRODUCING, KEYBOARDS</div>
+                <div class="mbr-text align-center mbr-fonts-style mbr-light mbr-py-4 display-5 hideme"><strong>MUSIC • </strong>DJ, MIXING, PRODUCING, KEYBOARDS</div>
             </div>
         </section>
 
         <section class="amp-lightbox-gallery cid-sarfMcttBh" id="gallery2-v">
             <div class="container-fluid">
                 <div class="mbr-row">
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/dj-mez-1-16x9.jpg" layout="responsive" width="350.91298666666665" height="197.512" alt="image" class="placeholder-loader lb-image">
@@ -3533,7 +3566,7 @@
     						 <strong>DJ M.E.Z.</strong><br>Artist (Tech House)
     					</div> 
 											</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/seneka-16x9.jpg" layout="responsive" width="350.781312" height="197.512" alt="image" class="placeholder-loader lb-image">
@@ -3562,7 +3595,7 @@
     						 <strong>Seneka</strong><br>Artist (Electronic)
     					</div> 
 											</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/oomori-lush-hour-youtube-banner.jpg" layout="responsive" width="351.13244444444445" height="197.512" alt="image" class="placeholder-loader lb-image">
@@ -3591,7 +3624,7 @@
     						 <strong>Mr. Omori</strong><br>Artist (Electronic)
     					</div> 
 											</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img lightbox="gallery2-v" src="assets/images/studio-16x9.jpg" layout="responsive" width="351.13244444444445" height="197.512" alt="image" class="placeholder-loader lb-image">
@@ -3625,7 +3658,7 @@
         <section class="amp-lightbox-gallery cid-saslnjXcAH" id="gallery2-z">
             <div class="container-fluid">
                 <div class="mbr-row">
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/daft-punk-remake-16x9.jpg" layout="responsive" width="350.7909385113269" height="197.8" alt="image" class="placeholder-loader lb-image">
@@ -3654,7 +3687,7 @@
     						 <strong>Daft Punk - Son of Flynn (Remake)</strong><br>Production, Video 
     					</div> 
 											</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/kavinsky-remake.jpg" layout="responsive" width="352.69690140845074" height="197.8" alt="image" class="placeholder-loader lb-image">
@@ -3683,7 +3716,7 @@
     						 <strong>Kavinsky - Nightcall (Remake)</strong><br>Production, Video 
     					</div> 
 											</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/mpc-live-jam-16x9.jpg" layout="responsive" width="351.64444444444445" height="197.8" alt="image" class="placeholder-loader lb-image">
@@ -3712,7 +3745,7 @@
     						 <strong>Akai MPC Live Jam</strong><br>Creator 
     					</div> 
 											</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/muse-1-16x9.jpg" layout="responsive" width="352.3079245283019" height="197.8" alt="image" class="placeholder-loader lb-image">
@@ -3748,7 +3781,7 @@
         <section class="amp-lightbox-gallery cid-saw4fXtRWz" id="gallery2-10">
             <div class="container-fluid">
                 <div class="mbr-row">
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img lightbox="gallery2-10" src="assets/images/ybh-16x9.jpg" layout="responsive" width="350.78948497854077" height="197.425" alt="image" class="placeholder-loader lb-image">
@@ -3777,7 +3810,7 @@
     						 <strong>Y.B.H. (Band)</strong><br>Keyboardist 
     					</div> 
 											</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/bopeep-1.jpg" layout="responsive" width="350.78948497854077" height="197.425" alt="image" class="placeholder-loader lb-image">
@@ -3806,7 +3839,7 @@
     						 <strong>Tokyo Rock City Ep.1 - Bo Peep</strong><br>Sound Recording, Mixing 
     					</div> 
 											</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/roberttairawilson.jpg" layout="responsive" width="350.97777777777776" height="197.425" alt="image" class="placeholder-loader lb-image">
@@ -3841,14 +3874,14 @@
 
         <section class="content4 mbr-section article cid-saym84CR4p" id="content4-1b">
             <div class="container">
-                <div class="mbr-text align-center mbr-fonts-style mbr-light mbr-py-4 display-5"><strong>OTHER • </strong>TRAVEL, WRITING</div>
+                <div class="mbr-text align-center mbr-fonts-style mbr-light mbr-py-4 display-5 hideme"><strong>OTHER • </strong>TRAVEL, WRITING</div>
             </div>
         </section>
 
         <section class="amp-lightbox-gallery cid-saxXhpGpyK" id="gallery2-13">
             <div class="container-fluid">
                 <div class="mbr-row">
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/hackingtokyo-16x9.jpg" layout="responsive" width="373.5085629420085" height="209.913" alt="image" class="placeholder-loader lb-image">
@@ -3877,7 +3910,7 @@
     						 <strong>Hacking Tokyo eBook</strong><br>Writing, Publishing 
     					</div> 
 											</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/cameraphonist-16x9.png" layout="responsive" width="373.5085629420085" height="209.913" alt="image" class="placeholder-loader lb-image">
@@ -3904,7 +3937,7 @@
     						 <strong>Escape eBook</strong><br>Photography 
     					</div> 
 											</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/travelspree-16x9.png" layout="responsive" width="372.99925384615386" height="209.913" alt="image" class="placeholder-loader lb-image">
@@ -3931,7 +3964,7 @@
     						 <strong>TravelSpree (Prototype)</strong><br>Concept, Web Scripts 
     					</div> 
 											</div>
-                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3">
+                    <div class="item gallery-image mbr-col-md-6 mbr-col-sm-12 mbr-col-lg-3 hideme">
 					<div class="row">
                         <div class="item-wrapper">
                             <amp-img src="assets/images/projectsea-16x9.jpg" layout="responsive" width="372.76365480427046" height="209.913" alt="image" class="placeholder-loader lb-image">
